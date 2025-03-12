@@ -1,0 +1,80 @@
+\documentclass{article} % article, book, presenation, beamer
+
+\usepackage{geometry} % This package allows the editing of the page layout
+\usepackage{amsmath}  % This package allows the use of a large range of mathematical formula, commands, and symbols
+\usepackage{graphicx}  % This package allows the importing of images
+\usepackage{color}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue}
+
+% \usepackage[a5paper,landscape,height=8cm,top=2.5cm,includehead=true,width=15cm]{geometry}
+
+\newcommand{\question}[2][]{\begin{flushleft}
+    \textbf{Question #1}: \textit{#2}
+\end{flushleft}}
+
+\newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
+
+\newcommand{\maketitletwo}[2][]{\begin{center}
+    \Large{\textbf{Assignment #1}
+        Course Title} % Name of course here
+    \vspace{5pt}
+    
+    \normalsize{Matthew Frenkel  % Your name here
+    
+    \today}        % Change to due date if preferred
+    \vspace{15pt}
+\end{center}}
+
+\begin{document}
+
+\title{DSP challenging problems}
+\author{Akbar Baghbani}
+\date{\today}
+\maketitle
+
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+    
+\section{Basic questions}
+    this is some basic question regarding signal and system theory.
+    
+    \question[1]{IQ sampling}
+    why we need to use \textbf{IQ sampling} in communication system? 
+    \begin{itemize}
+        \item why in some cases we use \textbf{single ADC sampling}, 
+        \item but in other cases we use or we \textbf{should} use \emph{In-phase and Quadrature} sampling?
+    \end{itemize}
+
+    \question[2]{Nyquist Sampling Theorem}
+    what is the \textbf{Nyquist Sampling Theorem}? why we need to follow this theorem in communication system? what is the \textbf{consequence} of not following this theorem?
+    \begin{itemize}
+        \item what is the \textbf{Nyquist rate} for a signal with bandwidth of 10 kHz?
+        \item If we sample this signal (10KHz single tone) with 20KSample/sec, that means just 2 samples per period, really we can extract real signal just with two samples? or maybe we need more samples?
+        \item what is the side effect of more sampling rate than Nyquist rate?
+        \item what is aliasing and how it can be effected in our sampling.
+    \end{itemize}
+
+    \question[3]{Phase Modulation and Demodulation}
+    what is a chalenging part in PSK modulation and demodulation? what is the \textbf{phase ambiguity} in PSK modulation and demodulation? how we can solve this problem?
+    \begin{itemize}
+        \item what is the \textbf{differential PSK} modulation and demodulation? how we can solve the \textbf{phase ambiguity} in this modulation and demodulation?
+        \item what is the coherent and non-coherent system?
+        \item If we use nondifferential PSK and then receiver should be coherent then how \textbf{trainning sequence} can help us to solve the phase ambiguity?
+    \end{itemize}
+
+    \question[4]{How would you analyze the frequency content of a signal?}
+
+    \question[5]{Describe the process of designing a digital filter.}
+
+    \question[6]{What are the differences between FIR and IIR filters?}
+
+
+\section{advanced questions}
+    this is some advanced question regarding signal and system theory and wireless digital comunnication.
+    
+    \question[1]{will be define later} 
+    
+\end{document}
