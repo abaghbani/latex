@@ -26,6 +26,8 @@
     \vspace{15pt}
 \end{center}}
 
+\setlength{\parskip}{5pt}
+
 \begin{document}
 
 \title{DSP challenging problems}
@@ -41,23 +43,38 @@
 \section{Basic questions}
     this is some basic question regarding signal and system theory.
     
-    \question[1]{IQ sampling}
+\subsection{Question: \textit{IQ sampling}}
     why we need to use \textbf{IQ sampling} in communication system? 
     \begin{itemize}
         \item why in some cases we use \textbf{single ADC sampling}, 
         \item but in other cases we use or we \textbf{should} use \emph{In-phase and Quadrature} sampling?
     \end{itemize}
 
-    \question[2]{Nyquist Sampling Theorem}
+\hrule
+\bigskip
+\subsection{Question: \textit{Nyquist Sampling Theorem}}
     what is the \textbf{Nyquist Sampling Theorem}? why we need to follow this theorem in communication system? what is the \textbf{consequence} of not following this theorem?
     \begin{itemize}
         \item what is the \textbf{Nyquist rate} for a signal with bandwidth of 10 kHz?
-        \item If we sample this signal (10KHz single tone) with 20KSample/sec, that means just 2 samples per period, really we can extract real signal just with two samples? or maybe we need more samples?
+        \item If we sample this signal (10KHz single tone) with 20KSample/sec, that means just 2 samples per period, can we really reconstruct origin signal just with two samples? or maybe we need more samples?
         \item what is the side effect of more sampling rate than Nyquist rate?
         \item what is aliasing and how it can be effected in our sampling.
+	\item How does quantization interact with sampling in practical ADCs, and how does it impact SNR? How oversampling can help?
     \end{itemize}
 
-    \question[3]{Phase Modulation and Demodulation}
+\hrule
+\bigskip
+\subsection{Question: \textit{Filter}}
+    what is \textbf{Function of this equation}: $H(s) = \frac{s}{s+1}$
+    \begin{itemize}
+        \item what is the \textbf{cut off frequency} of this filter?
+        \item what type of filter is it? low-pass, band-pass, ...
+        \item how to implement this filter from continuse domain into discreat domain $s = \frac{1}{T} \frac{z-1}{z+1}$ =>    $H(z) = \frac{1-z^-1}{1+\alpha z^-1}$ ($\alpha = \frac{T-2}{T+2}$)
+     \end{itemize}
+
+    \hrule
+    \bigskip
+\subsection{Question: \textit{Phase Modulation and Demodulation}}
     what is a chalenging part in PSK modulation and demodulation? what is the \textbf{phase ambiguity} in PSK modulation and demodulation? how we can solve this problem?
     \begin{itemize}
         \item what is the \textbf{differential PSK} modulation and demodulation? how we can solve the \textbf{phase ambiguity} in this modulation and demodulation?
@@ -65,11 +82,13 @@
         \item If we use nondifferential PSK and then receiver should be coherent then how \textbf{trainning sequence} can help us to solve the phase ambiguity?
     \end{itemize}
 
-    \question[4]{How would you analyze the frequency content of a signal?}
+    \hrule
+    \bigskip
+    \question[5]{How would you analyze the frequency content of a signal?}
 
-    \question[5]{Describe the process of designing a digital filter.}
+    \question[6]{Describe the process of designing a digital filter.}
 
-    \question[6]{What are the differences between FIR and IIR filters?}
+    \question[7]{What are the differences between FIR and IIR filters?}
 
 
 \section{advanced questions}
